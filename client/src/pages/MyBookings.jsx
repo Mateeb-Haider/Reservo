@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Title from '../components/Title.jsx'
 import { assets, userBookingsDummyData,  } from '../assets/assets.js'
 const MyBookings = () => {
-    const [bookings, setBookings] = useState(userBookingsDummyData);
+    const [bookings] = useState(userBookingsDummyData);
   return (
     <div className=' py-28 md:pb-35 md:pt-32 px-4 md:px-16 lg:px-24 xl:px-32'>
         <Title title='My Bookings' subTitle='Easily manage your past,

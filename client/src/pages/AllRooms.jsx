@@ -9,7 +9,7 @@ const CheckBox = ({ label, selected = false, onChange = () => {} }) => {
       <input
         type="checkbox"
         checked={selected}
-        onChange={(e) => onchange(e.target.checked, label)}
+        onChange={(e) => onChange(e.target.checked, label)}
       />
       <span className="font-light select-none ">{label}</span>
     </label>
@@ -23,7 +23,7 @@ const RadioButton = ({ label, selected = false, onChange = () => {} }) => {
         type="radio"
         name="sortOption"
         checked={selected}
-        onChange={() => onchange(label)}
+        onChange={() => onChange(label)}
       />
       <span className="font-light select-none ">{label}</span>
     </label>
