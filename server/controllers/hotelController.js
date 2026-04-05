@@ -1,5 +1,5 @@
-import Hotel from "../models/Hotel";
-import User from "../models/User";
+import Hotel from "../models/Hotel.js";
+import User from "../models/User.js";
 
 export const registerHotel = async (req, res) => {
 try {
@@ -11,7 +11,7 @@ try {
     if(hotel){
         return res.json({success: false, message:"Hotel Already Register"})
     }
-    await hotel.create({name, address, contact, city, owner});
+    await Hotel.create({name, address, contact, city, owner});
 
     await User.findByIdAndUpdate(owner, {role: "hotelOwner"});
 

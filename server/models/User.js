@@ -20,10 +20,9 @@ const userSchema = mongoose.Schema({
      role:{type : String,
         enum:["user", "hotelOwner"], default:"user"
     },
-     recenSearchedCities:[{
-        type : String,
-        required : true
-    },{timestamps: true}],
+     recentSearchedCities:[{
+        type : String
+    }],
     
 });
 const User = mongoose.model("User", userSchema);
